@@ -1,0 +1,29 @@
+.testimoni__card {
+    padding: 3.4rem 3.5rem;
+    background-color: #FAFAFA;
+    border: 3px solid #FFFFFF03;
+    min-width: 46.2rem;
+    border-radius: 1.5rem;
+}
+.testimoni__card__inner {
+    display: flex;
+    gap: 2rem;
+}
+.testimoni__card__inner > img {
+    height: 7.2rem;
+    width: 7.2rem;
+}
+.testimoni__card__inner__text > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: normal;
+    color: var(--color-primary);
+}
+.testimoni__card__inner__text > p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: normal;
+    color: #707070;
+}

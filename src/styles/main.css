@@ -1,0 +1,103 @@
+/* --- MAIN CSS HUB --- */
+/* This file imports all other style files. */
+
+/* 1. Import CSS Reset */
+@import "./base/_reset.css";
+
+/* 2. Import Base Layers */
+@import "./base/_fonts.css";
+@import "./base/_colors.css";
+@import "./base/_typography.css";
+
+/* 3. Import Component Layers */
+@import "./components/_navbar.css";
+@import "./components/_button.css";
+@import "./components/_card.css";
+
+
+/* 4. Hero Section */
+.hero {
+    background: var(--color-primary);
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    padding-bottom: 6rem;
+}
+.hero > img {
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.hero__header {
+    padding: 6rem 4rem 2rem 4rem;
+}
+.hero__header__h1 {
+    font-weight: 600;
+    font-size: 7.2rem;
+    line-height: 6.4rem;
+    color: white;
+    margin-bottom: 4rem;
+}
+.hero__header__h1 > span {
+    color: var(--color-secondary);
+}
+.hero__header__p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: normal;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero__button {
+    display: flex;
+    gap: 1rem;
+    padding: 0 4rem 0 4rem;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.hero__p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4rem;
+    padding: 0 4rem 0 4rem;
+    color: #FFFFFFCC;
+}
+.hero__p > span {
+    border: 1px solid #FFFFFF;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.testimoni {
+    padding-top: 2rem;
+    margin: 0 1rem 0 1rem;
+}
+.testimoni__title {
+    font-family: inherit;
+    color: var(--color-primary);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+.testimoni__body {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.testimoni__body__content {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(5, auto);
+    row-gap: 1rem;
+    column-gap: 1rem;
+}

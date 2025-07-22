@@ -1,0 +1,33 @@
+.button {
+    /* padding: 2.4rem 0 2.4rem 0; */
+    border-radius: 99999px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 6rem;
+    border: none;
+    cursor: pointer;
+}
+.button-primary-white {
+    color: var(--color-primary);
+}
+.button-primary-white:hover {
+    color: var(--color-accent);
+}
+.button-primary-white:active {
+    color: white;
+    background-color: var(--color-accent);
+}
+.button-secondary {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+.button-secondary:hover {
+    background-color: #A5FE39;
+}
+.button-secondary:active {
+    background-color: var(--color-accent);
+    color: white;
+}
+.button-full {
+    width: 100%;
+}

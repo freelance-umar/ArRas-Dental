@@ -1,0 +1,25 @@
+.navbar {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 3px solid #CDDFF2;
+    top: 0;
+    background-color: white;
+}
+.navbar__company {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.navbar__company > img {
+    width: 61px;
+    height: 52px;
+}
+.navbar__menu {
+    width: 48px;
+}
