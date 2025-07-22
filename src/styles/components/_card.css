@@ -4,10 +4,16 @@
     border: 3px solid #FFFFFF03;
     min-width: 46.2rem;
     border-radius: 1.5rem;
+    display: flex;
+    /* height: max-content; */
+}
+.testimoni__card:hover {
+    border: 3px solid #CDDFF2
 }
 .testimoni__card__inner {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 .testimoni__card__inner > img {
     height: 7.2rem;
