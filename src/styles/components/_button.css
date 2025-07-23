@@ -6,6 +6,9 @@
     height: 6rem;
     border: none;
     cursor: pointer;
+    padding: 0 4rem;
+    line-height: 4rem;
+    font-family: 'Inter', sans-serif;
 }
 .button-primary {
     color: white;
