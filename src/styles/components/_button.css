@@ -7,6 +7,16 @@
     border: none;
     cursor: pointer;
 }
+.button-primary {
+    color: white;
+    background-color: var(--color-primary);
+}
+.button-primary:hover {
+    background-color: #8345DB;
+}
+.button-primary:active {
+    background-color: var(--color-accent);
+}
 .button-primary-white {
     color: var(--color-primary);
 }

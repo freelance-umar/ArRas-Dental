@@ -33,3 +33,91 @@
     line-height: normal;
     color: #707070;
 }
+
+/* Services Section Card */
+.services__card {
+    display: flex;
+    gap: 4rem;
+    background-color: #FAFAFA;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    transition: border-color 0.2s ease;
+}
+.services__card:hover {
+    border-color: #CDDFF2;
+}
+.services__card:hover .services__card__body > h1 {
+    color: var(--color-secondary);
+}
+.services__card_img_container {
+    max-width: 26rem;
+    max-height: 18rem;
+    border-radius: 2rem;
+}
+.services__card_img_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+.services__card__body {
+    padding: 3.2rem 2rem 3.9rem 0;
+    position: relative;
+}
+.service__card__body__click {
+    position: absolute;
+    right: 2rem;
+}
+.services__card__body > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 100%;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+}
+.services__card__body > p {
+    font-family: 'Inter', sans-serif;
+    color: #626262;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 100%;
+    text-align: justify;
+}
+
+/* Services Card bottom */
+.services__bottom__card {
+    padding: 4.1rem 2rem;
+    border-radius: 1.5rem;
+    background-color: #FAFAFA;
+    width: fit-content;
+    min-width: 20rem;
+    position: relative;
+    cursor: pointer;
+}
+.services__bottom__card > .image-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.services__bottom__card > h1 {
+    font-family: inherit;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+.services__bottom__card > p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 100%;
+}
+.services__bottom__card > .tooltip-gray {
+    position: absolute;
+    bottom: .95rem;
+    right: 0.95rem;
+}
