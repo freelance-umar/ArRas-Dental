@@ -14,7 +14,45 @@
 @import "./components/_button.css";
 @import "./components/_card.css";
 
-
+/* 3,5. Menu */
+main {
+    position: relative;
+}
+.mobile__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: #6A39B0FA;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 0 4rem 4rem 4rem;
+}
+.mobile__menu.open {
+  transform: translateX(0);
+}
+.mobile__menu__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 10rem;
+    align-items: end;
+}
+.mobile__menu__content > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    color: white;
+    text-align: end;
+    padding: .4rem 0;
+}
+.mobile__menu__back {
+    color: var(--color-secondary) !important;
+    max-width: fit-content !important;
+}
 /* 4. Hero Section */
 .hero {
     background: var(--color-primary);
@@ -389,7 +427,7 @@
     background-color: #FFEFFE;
     border-radius: 2rem;
     padding: 8rem 2rem;
-    margin: 3rem 1rem 1rem 1rem;
+    margin: 3rem 1rem 0rem 1rem;
 }
 .doctors__header {
     padding: 2rem 1rem;
@@ -437,4 +475,94 @@
     display: flex;
     gap: 1rem;
     min-width: max-content;
+}
+.doctors__schedule {
+    background-color: var(--color-primary);
+    border-radius: 2rem;
+    padding: 6rem;
+    position: relative;
+    margin: 0 1rem;
+}
+.doctors__schedule__tip {
+    border: 3px solid var(--color-primary);
+    position: absolute;
+    left: 0;
+    background-color: white;
+    color: var(--color-primary);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 100%;
+    text-align: center;
+    border-radius: 9999px 9999px 9999px 0;
+    top: -2.74rem;
+    padding: 1.5rem 6rem;
+}
+.doctors__schedule__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.doctors__schedule__day {
+    display: flex;
+    gap: 3rem;
+}
+.doctors__schedule__day > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 100%;
+    color: white;
+    min-width: 10rem;
+}
+.doctors__schedule__day__doctor {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: .4rem;
+}
+.doctors__schedule__day__doctor h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 100%;
+    color: white;
+}
+
+/* 10. Recall */
+.recall {
+    border: 3px solid #CDDFF2;
+    border-radius: 2rem;
+    padding: 4rem;
+    margin: 1rem;
+}
+.recall__header {
+    display: flex;
+    gap: 4rem;
+    padding: 0 3.2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.recall__header__img {
+    width: 8rem;
+    height: 8rem;
+}
+.recall__header__img > img {
+    width: 100%;
+    height: 100%;
+}
+.recall__header > h2 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    color: #0D0D0D;
+    flex: 1;
+    text-align: justify;
+    text-wrap-style: pretty;
+}
+.recall__button {
+    display: flex;
+    gap: 1rem;
 }
