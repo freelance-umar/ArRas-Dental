@@ -67,4 +67,53 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = createKlinikImage(`/src/assets/images/optimized/gallery/${filename}`);
       gallery.appendChild(el);
     });
+    // Swiper
+    const thumbsSwiper = new Swiper('.floating-thumbs', {
+      spaceBetween: 6,
+      slidesPerView: 4,
+      loop: true,                  // 👈 enable loop
+      watchSlidesProgress: true,
+      loopedSlides: 4              // 👈 must match number of slides
+    });
+    const mainSwiper = new Swiper('.main-swiper', {
+      spaceBetween: 10,
+      loop: true,                  // 👈 enable loop
+      loopedSlides: 4,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      thumbs: {
+        swiper: thumbsSwiper,
+      },
+    });
+
+
+    // Testimoni
+    const track = document.querySelector('.testimoni__body__content');
+
+    // Clone for seamless looping
+    // const clone = track.cloneNode(true);
+    // track.parentNode.appendChild(clone);
+
+    const totalWidth = track.offsetWidth;
+
+    // Create GSAP timeline
+    const tl = gsap.timeline({ repeat: -1, ease: "none" });
+
+    tl.to('.testimoni__body__content', {
+      x: `-=${totalWidth}`,
+      duration: 30,
+    });
+
+    // Pause on hover
+    const wrapper = document.querySelector('.testimoni__body');
+
+    wrapper.addEventListener('mouseenter', () => {
+      tl.pause();
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      tl.play();
+    });
 });

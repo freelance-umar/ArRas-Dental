@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <title>ArRas Dental Clinic & Lab</title>
@@ -42,7 +43,43 @@
       </div>      
     <!-- Hero -->
       <div class="hero">
-        <img src="./src/assets/images/hero/image=1.jpg" alt="hero image 1">
+        <div class="swiper-container">
+          <!-- Main swiper -->
+          <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-5.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- Floating Thumbnails -->
+           <div class="swiper floating-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/assets/images/optimized/gallery/image-5.jpg" alt="">
+              </div>
+            </div>
+           </div>
+        </div>
+        <!-- <img src="./src/assets/images/hero/image=1.jpg" alt="hero image 1"> -->
         
         <div class="hero__header">
           <h1 class="hero__header__h1">
@@ -606,6 +643,8 @@
       </div>
     </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
