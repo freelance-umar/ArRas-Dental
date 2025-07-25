@@ -74,6 +74,7 @@
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    padding-right: 8rem;
 }
 .services__bottom__body__content {
     display: flex;
@@ -110,6 +111,7 @@
         position: absolute;
         right: 0;
         top: 50%;
+        z-index: 10;
     }
     .services__bottom {
         position: relative;

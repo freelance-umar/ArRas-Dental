@@ -55,6 +55,7 @@
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    padding-right: 1.6rem;
 }
 .about__inner__body__gallery__body {
     display: flex;
@@ -151,5 +152,8 @@
     }
     .about__inner__body {
         max-width: 68rem;
+    }
+    .about__inner__body__gallery_nav {
+        display: none;
     }
 }

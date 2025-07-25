@@ -143,4 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.addEventListener('mouseleave', () => {
       tl.play();
     });
+    // Swiper About
+    new Swiper('.about__inner__body__gallery', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      freeMode: true,
+      grabCursor: true,
+      slideClass: 'swiper-about-slide',
+    });
+    // swiper services
+    new Swiper('.services__bottom__body', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      freeMode: true,
+      grabCursor: true,
+      slideClass: 'services__bottom__card',
+    });
 });
