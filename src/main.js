@@ -167,4 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
       grabCursor: true,
       slideClass: 'laboratorium__gallery__img',
     });
+    // Swiper lab gallery
+    new Swiper('.doctors__swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      freeMode: true,
+      grabCursor: true,
+      slideClass: 'doctors__card',
+    });
 });
