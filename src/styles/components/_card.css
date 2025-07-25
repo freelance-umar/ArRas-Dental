@@ -91,9 +91,10 @@
     border-radius: 1.5rem;
     background-color: #FAFAFA;
     width: fit-content;
-    min-width: 20rem;
+    width: 20rem;
     position: relative;
     cursor: pointer;
+    height: 25rem;
 }
 .services__bottom__card > .image-wrap {
     display: flex;
@@ -166,4 +167,15 @@
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 25px;
+}
+@media only screen and (min-width: 1440px) {
+    .services__bottom__card {
+        width: 28rem;
+        height: 31rem;
+        padding: 4.5rem 4rem;
+    }
+    .services__bottom__card > p {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 }

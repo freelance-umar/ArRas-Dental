@@ -1,0 +1,120 @@
+.services {
+    margin: 1rem;
+}
+.services__header {
+    padding: 8rem 1rem 0 1rem;
+}
+.services__header__caption {
+    padding: 0 2rem 0 2rem;
+}
+.services__header__caption > h2 {
+    font-family: inherit;
+    font-weight: 200;
+    font-size: 4rem;
+    line-height: 100%;
+    color: var(--color-primary);
+}
+.services__header__caption > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+.services__header__caption > h1 > span {
+    color: var(--color-secondary);
+}
+.services__header__caption > p {
+    color: var(--color-primary);
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+.services__header__button {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
+.services__header__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.services__bottom {
+    background-color: #EFF1FF;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.services__bottom__header {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.services__bottom__header__left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.services__bottom__header__left > p {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--color-primary);
+}
+.services__bottom__header__right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.services__bottom__body {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.services__bottom__body__content {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content;
+}
+.services__bottom__dektop__arrow {
+    display: none;
+}
+@media only screen and (min-width: 1440px) {
+    .services {
+        margin: 3rem 6rem;
+    }
+    .services__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .services__header__caption__outer {
+        max-width: 44rem;
+    }
+    .services__header__highlights {
+        max-width: 72.4rem;
+    }
+    .services__card_img_container {
+        width: 26rem;
+        height: 18rem;
+        flex-shrink: 0;
+    }
+    .services__bottom__header__right {
+        display: none;
+    }
+    .services__bottom__dektop__arrow {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+    .services__bottom {
+        position: relative;
+    }
+    /* .services__header__button button {
+        max-width: 20rem;
+    } */
+}
