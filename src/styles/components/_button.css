@@ -41,6 +41,23 @@
     background-color: var(--color-accent);
     color: white;
 }
+.button-tertiary {
+    border: 3px solid var(--color-primary);
+    background-color: white;
+    color: var(--color-primary);
+    border: 3px solid #8345DB;
+}
+.button-tertiary:hover {
+    background-color: #CDDFF2;
+    border: 3px solid #CDDFF2;
+}
+.button-tertiary:active {
+    background-color: var(--color-accent);
+    color: white;
+}
 .button-full {
     width: 100%;
+}
+.button-sm {
+    height: 4rem;
 }

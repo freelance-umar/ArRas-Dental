@@ -18,16 +18,30 @@
     <main>
       <!-- Navbar -->
       <div class="navbar">
-        <div class="navbar__company">
-          <img src="/src/assets/icons/Logo.svg" alt="company logo">
-          <div class="navbar__company__name">
-            <span>ArRas</span> 
-            <span>Dental</span><br>
-            <span>Clinic & Lab</span>
+        <div class="navbar__inner">
+          <div class="navbar__company">
+            <img src="/src/assets/icons/Logo.svg" alt="company logo">
+            <div class="navbar__company__name">
+              <span>ArRas</span> 
+              <span>Dental</span><br>
+              <span>Clinic & Lab</span>
+            </div>
           </div>
-        </div>
-        <div class="navbar__menu">
-          <img src="/src/assets/icons/button/icons=menu.svg" alt="menu">
+          <div class="navbar__menu">
+            <img src="/src/assets/icons/button/icons=menu.svg" alt="menu">
+          </div>
+          <div class="navbar__menu__desktop">
+            <a href="#testimoni">TESTIMONI</a>
+            <a href="#tentang">TENTANG KAMI</a>
+            <a href="#layanan">LAYANAN</a>
+            <a href="#dokter">DOKTER</a>
+            <a href="#jadwal-praktek">JADWAL PRAKTEK</a>
+            <a href="#galeri">GALERI</a>
+            <div class="navbar__menu__desktop__btn">
+              <button class="button button-primary button-sm">Hubungi Admin 1</button>
+              <button class="button button-tertiary button-sm">Hubungi Admin 2</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="mobile__menu">
@@ -102,7 +116,7 @@
       </div>
 
     <!-- Testimoni -->
-      <div class="testimoni">
+      <div class="testimoni" id="testimoni">
         <h1 class="testimoni__title">Testimoni Pelanggan</h1>
         <div class="testimoni__body">
           <div class="testimoni__body__content">
@@ -203,7 +217,7 @@
       </div>
 
     <!-- About -->
-      <div class="about">
+      <div class="about" id="tentang">
         <div class="about__inner">
           <div class="about__inner__header">
             <h1>Tentang</h1>
@@ -236,7 +250,7 @@
       </div>
 
     <!-- Services -->
-     <div class="services">
+     <div class="services" id="layanan">
       <div class="services__header">
         <div class="services__header__caption">
           <h2>Layanan Lengkap</h2>
@@ -464,7 +478,7 @@
       </div>
 
     <!-- Doctors -->
-      <div class="doctors">
+      <div class="doctors" id="dokter">
         <div class="doctors__header">
           <h2>Dokter Kami</h2>
           <h1>Yang Selalu Siap Merawat Gigi Kamu</h1>
@@ -548,7 +562,7 @@
 
         </div>
       </div>
-      <div class="doctors__schedule">
+      <div class="doctors__schedule" id="jadwal-praktek">
           <div class="doctors__schedule__tip">Jadwal Praktek</div>
           <div class="doctors__schedule__inner">  
             <div class="doctors__schedule__day">
@@ -613,7 +627,7 @@
       </div>
      </div>
      <!-- Gallery Klinik -->
-      <div class="gallery__klinik">
+      <div class="gallery__klinik" id="galeri">
         <div class="gallery__klinik__header">
           <h1>Gallery Klinik</h1>
           <div class="gallery__nav">
