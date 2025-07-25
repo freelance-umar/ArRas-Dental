@@ -17,6 +17,7 @@
 /* 4. Section Styles */
 @import "./sections/_hero.css";
 @import "./sections/_testimoni.css";
+@import "./sections/_about.css";
 /* 3,5. Menu */
 main {
     position: relative;
@@ -55,107 +56,6 @@ main {
 .mobile__menu__back {
     color: var(--color-secondary) !important;
     max-width: fit-content !important;
-}
-
-/* 6. About Section */
-.about {
-    background-color: #EFF1FF;
-    margin: 1rem;
-    border-radius: 2rem;
-}
-.about__inner {
-    padding: 8rem 2rem;
-}
-.about__inner__header {
-    margin-bottom: 2rem;
-}
-.about__inner__header > h1 {
-    font-family: inherit;
-    font-weight: 300;
-    font-size: 4rem;
-    color: var(--color-primary);
-}
-.about__inner__header > h2 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 6.4rem;
-    line-height: 6.4rem;
-    color: var(--color-primary);
-}
-.about__inner__body {
-    border-width: 3px 0px 3px 0px;
-    border-style: solid;
-    border-color: #6B36B8;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.about__inner__body > p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.8rem;
-    color: var(--color-primary);
-    text-align: justify;
-}
-.about__inner__body .about__inner__body__company {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-    color: var(--color-primary);
-}
-.about__inner__body .about__inner__body__name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-    color: var(--color-accent);
-}
-.about__inner__body__gallery {
-    overflow-x: scroll;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-}
-.about__inner__body__gallery__body {
-    display: flex;
-    gap: .5rem;
-    margin-bottom: 1.5rem;
-}
-.about__inner__body__gallery__body > img {
-    border-radius: 2rem;
-    object-fit: cover;
-    height: 25rem;
-    width: 42.75rem;
-    display: block;
-    min-width: 42.75rem;
-}
-.about__inner__body__gallery__body_last_item {
-    width: 25rem;
-    border: 3px solid var(--color-primary);
-    padding: 8.3rem 2rem;
-    border-radius: 2rem;
-}
-.about__inner__body__gallery__body_last_item > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    color: var(--color-primary);
-}
-.about__inner__body__gallery__body_last_item > h2 {
-    font-family: inherit;
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-    color: var(--color-primary);
-}
-.about__inner__body__gallery_nav {
-    display: flex;
-    justify-content: flex-end;
-}
-.about__inner__body__gallery_nav > div {
-    display: flex;
-    gap: 1rem;
 }
 
 /* 7. Service Section */

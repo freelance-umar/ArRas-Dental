@@ -46,7 +46,7 @@
 .navbar__menu__desktop {
     display: none;
 }
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .navbar__menu {
     display: none;
   }

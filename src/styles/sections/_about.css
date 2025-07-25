@@ -1,0 +1,155 @@
+.about {
+    background-color: #EFF1FF;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+.about__inner {
+    padding: 8rem 2rem;
+}
+.about__inner__header {
+    margin-bottom: 2rem;
+}
+.about__inner__header > h1 {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+.about__inner__header > h2 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    color: var(--color-primary);
+}
+.about__inner__body {
+    border-width: 3px 0px 3px 0px;
+    border-style: solid;
+    border-color: #6B36B8;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.about__inner__body > p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    color: var(--color-primary);
+    text-align: justify;
+}
+.about__inner__body .about__inner__body__company {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--color-primary);
+}
+.about__inner__body .about__inner__body__name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--color-accent);
+}
+.about__inner__body__gallery {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.about__inner__body__gallery__body {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    min-width: min-content;
+}
+.about__inner__body__gallery__body > img {
+    border-radius: 2rem;
+    object-fit: cover;
+    height: 25rem;
+    width: 42.75rem;
+    display: block;
+    min-width: 42.75rem;
+}
+.about__inner__body__gallery__body_last_item {
+    width: 20rem;
+    height: 25rem;
+    border: 3px solid var(--color-primary);
+    padding: 0 1rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* position: relative; */
+}
+.about__inner__body__gallery__body_last_item > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: var(--color-primary);
+}
+.about__inner__body__gallery__body_last_item > h2 {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--color-primary);
+}
+/* .about__inner__body__gallery__body_last_item > div {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 2.8rem;
+} */
+.about__inner__body__gallery__body_last_item:hover h1,
+.about__inner__body__gallery__body_last_item:hover h2,
+.about__inner__body__gallery__body_last_item:hover div {
+    color: white;
+}
+.about__inner__body__gallery__body_last_item,
+.about__inner__body__gallery__body_last_item > * {
+    transition: all 0.3s ease;
+}
+.about__inner__body__gallery__body_last_item:hover {
+    background-color: #F335A7;
+    border: 3px solid #F335A7;
+}
+.about__inner__body__gallery__body_last_item .arrow {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: center; /* penting agar rotasi dari tengah */
+    transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    align-self: flex-start; /* agar tidak ikut tengah secara vertikal */
+    width: fit-content;     /* supaya tidak selebar parent */
+    height: auto;
+    opacity: 0;
+}
+.about__inner__body__gallery__body_last_item:hover .arrow {
+    transform: rotate(0); /* searah jarum jam → jadi ↓ */
+    color: white; /* opsional, menyesuaikan hover efek lain */
+    opacity: 1;
+}
+.about__inner__body__gallery_nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.about__inner__body__gallery_nav > div {
+    display: flex;
+    gap: 1rem;
+}
+@media only screen and (min-width: 1440px) {
+    .about {
+        margin: 3rem 6rem;
+    }
+    .about__inner {
+        padding: 10rem 8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .about__inner__body {
+        max-width: 68rem;
+    }
+}
