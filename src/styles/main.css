@@ -14,6 +14,8 @@
 @import "./components/_button.css";
 @import "./components/_card.css";
 
+/* 4. Section Styles */
+@import "./sections/_hero.css";
 /* 3,5. Menu */
 main {
     position: relative;
@@ -52,116 +54,6 @@ main {
 .mobile__menu__back {
     color: var(--color-secondary) !important;
     max-width: fit-content !important;
-}
-/* 4. Hero Section */
-.hero {
-    background: var(--color-primary);
-    margin: 10px 10px 10px 10px;
-    border-radius: 2rem;
-    padding-bottom: 6rem;
-}
-.swiper-container {
-    position: relative;
-    height: 40rem;
-    width: 100%;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-.swiper-slide {
-    height: 40rem !important;
-}
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.floating-thumbs {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 10;
-    background: #00000080;
-    padding: 6px;
-    border-radius: 10px;
-    display: flex;
-    gap: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
-.floating-thumbs .swiper-slide {
-    width: 60px !important;
-    height: 50px !important;
-    opacity: 0.5;
-    border-radius: 5px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s;
-}
-.floating-thumbs .swiper-slide-thumb-active {
-    opacity: 1;
-    border: 2px solid white;
-    transform: scale(1.1);
-    border-radius: 5px;
-}
-.floating-thumbs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.hero > img {
-    height: 40rem;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.hero__header {
-    padding: 6rem 4rem 2rem 4rem;
-}
-.hero__header__h1 {
-    font-weight: 600;
-    font-size: 7.2rem;
-    line-height: 6.4rem;
-    color: white;
-    margin-bottom: 4rem;
-}
-.hero__header__h1 > span {
-    color: var(--color-secondary);
-}
-.hero__header__p {
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: normal;
-    color: white;
-    margin-bottom: 2rem;
-}
-
-.hero__button {
-    display: flex;
-    gap: 1rem;
-    padding: 0 4rem 0 4rem;
-    font-family: 'Inter', sans-serif;
-    margin-bottom: 2rem;
-}
-
-.hero__p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.4rem;
-    padding: 0 4rem 0 4rem;
-    color: #FFFFFFCC;
-}
-.hero__p > span {
-    border: 1px solid #FFFFFF;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 100%;
-    display: inline-block;
-    font-size: 1rem;
-    text-align: center;
-    margin-right: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    color: #FFFFFF;
 }
 
 /* 5. Testimoni Section */

@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Swiper
+
     const thumbsSwiper = new Swiper('.floating-thumbs', {
       spaceBetween: 6,
       slidesPerView: 4,
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         swiper: thumbsSwiper,
       },
     });
+
     // swiper lab
     const thumbsSwiperLab = new Swiper('.floating-thumbs-lab', {
       spaceBetween: 6,
@@ -114,8 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.testimoni__body__content');
 
     // Clone for seamless looping
-    // const clone = track.cloneNode(true);
+    const clone = Array.from(track.children)
     // track.parentNode.appendChild(clone);
+    clone.forEach(card => {
+      track.appendChild(card.cloneNode(true))
+    })
+    // track.appendChild(clone)
 
     const totalWidth = track.offsetWidth;
 
