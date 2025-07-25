@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = createKlinikImage(`/src/assets/images/optimized/gallery/${filename}`);
       gallery.appendChild(el);
     });
+
     // Swiper
     const thumbsSwiper = new Swiper('.floating-thumbs', {
       spaceBetween: 6,
@@ -85,6 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       thumbs: {
         swiper: thumbsSwiper,
+      },
+    });
+    // swiper lab
+    const thumbsSwiperLab = new Swiper('.floating-thumbs-lab', {
+      spaceBetween: 6,
+      slidesPerView: 4,
+      loop: true,                  // 👈 enable loop
+      watchSlidesProgress: true,
+      loopedSlides: 4              // 👈 must match number of slides
+    });
+    const mainSwiperLab = new Swiper('.main-swiper-lab', {
+      spaceBetween: 10,
+      loop: true,                  // 👈 enable loop
+      loopedSlides: 4,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      thumbs: {
+        swiper: thumbsSwiperLab,
       },
     });
 
