@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const mainSwiperLab = new Swiper('.main-swiper-lab', {
       spaceBetween: 10,
-      loop: true,                  // 👈 enable loop
+      loop: true,               
       loopedSlides: 4,
       autoplay: {
         delay: 3000,
@@ -158,5 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
       freeMode: true,
       grabCursor: true,
       slideClass: 'services__bottom__card',
+    });
+    // Swiper lab gallery
+    new Swiper('.laboratorium__gallery__swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      freeMode: true,
+      grabCursor: true,
+      slideClass: 'laboratorium__gallery__img',
     });
 });
