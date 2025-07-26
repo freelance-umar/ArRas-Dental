@@ -1,0 +1,128 @@
+/* Gallery Klinik */
+.gallery__klinik {
+    background-color: #ECF3FB;
+    border-radius: 2rem;
+    padding: 6rem 2rem;
+    margin: 0 1rem 7.5rem 1rem;
+}
+.gallery__klinik__header {
+    padding: 4rem 2rem;
+}
+.gallery__klinik__header > h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 6.4rem;
+    color: var(--color-primary);
+    line-height: 100%;
+    margin-bottom: 4rem;
+}
+.gallery__nav {
+    display: flex;
+    gap: 4rem;
+    padding: 0 .5rem;
+    color: #065099;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 100%;
+}
+.gallery__nav__child {
+    cursor: pointer;
+}
+.gallery__nav__child.active {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+.gallery__klinik__swiper__outer {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    cursor: grab;
+    user-select: none;
+    border-width: 3px 0px 3px 0px;
+    border-style: solid;
+    border-color: #96E930;
+    padding: 4rem 0;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+.gallery__klinik__swiper__outer::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+.gallery__klinik__swiper__outer.active {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.gallery__klinik__swiper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+    gap: 5px;
+    width: max-content;
+}
+.gallery__klinik__img {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gallery__klinik__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery__klinik__arrow__right {
+    display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+    .gallery__klinik {
+        margin: 3rem 6rem 2rem 6rem;
+        padding: 8rem;
+    }
+    .gallery__klinik__header {
+        padding: 4rem 0;
+        display: flex;
+        gap: 6rem;
+        align-items: end;
+    }
+    .gallery__klinik__header > h1 {
+        margin: 0;
+    }
+    .gallery__klinik__swiper {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-auto-flow: column;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+    .gallery__klinik__img {
+        width: 33.2rem;
+        height: 33.2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .gallery__nav {
+        padding-bottom: 1.5rem;
+    }
+    .gallery__klinik__swiper__outer {
+        position: relative;
+    }
+    .gallery__klinik__arrow__right {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -2rem;
+        z-index: 10;
+    }
+    .relative {
+        position: relative;
+    }
+}
