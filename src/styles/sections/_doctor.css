@@ -163,3 +163,15 @@
         white-space: nowrap;
     }
 }
+@media only screen and (min-width: 1920px) {
+    .doctors {
+        margin: 0;
+    }
+    .doctors__swiper__arrow__right {
+        display: block;
+        right: 0;
+    }
+    .doctors__schedule {
+        margin: 0;
+    }
+}
