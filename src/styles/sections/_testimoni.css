@@ -37,5 +37,6 @@
 @media only screen and (min-width: 1920px) {
     .testimoni {
         margin: 0;
+        padding: 4rem 0;
     }
 }

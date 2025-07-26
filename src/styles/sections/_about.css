@@ -36,6 +36,7 @@
     line-height: 2.8rem;
     color: var(--color-primary);
     text-align: justify;
+    margin-bottom: 2rem;
 }
 .about__inner__body .about__inner__body__company {
     font-family: 'Inter', sans-serif;
@@ -57,6 +58,7 @@
     scroll-behavior: smooth;
     padding-right: 1.6rem;
     -ms-overflow-style: none;
+    padding-right: 1.5rem;
 }
 ::-webkit-scrollbar {
   display: none; /* Hides scrollbar in WebKit/Chromium */
@@ -158,7 +160,21 @@
     .about__inner__body {
         max-width: 68rem;
     }
+    .about__inner__body > p {
+        margin-bottom: 4rem;
+    }
+    .about__inner__body__gallery {
+        margin-bottom: 4rem;
+    }
     .about__inner__body__gallery_nav {
         display: none;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .about {
+        margin: 3rem 0;
+    }
+    .about__inner {
+        padding: 11rem 8rem;
     }
 }
