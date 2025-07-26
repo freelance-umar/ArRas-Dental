@@ -126,3 +126,8 @@
         position: relative;
     }
 }
+@media only screen and (min-width: 1920px) {
+    .gallery__klinik {
+        margin: 0 0 14.2rem 0;
+    }
+}

@@ -52,3 +52,8 @@
         min-width: 44rem;
     }
 }
+@media only screen and (min-width: 1920px) {
+    .recall {
+        margin: 3rem 0;
+    }
+}
