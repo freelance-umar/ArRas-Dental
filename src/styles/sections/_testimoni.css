@@ -9,6 +9,7 @@
     font-weight: 300;
     font-size: 2rem;
     line-height: 3.2rem;
+    margin-bottom: 3rem;
 }
 .testimoni__body {
     overflow: hidden;
@@ -24,7 +25,17 @@
 }
 @media only screen and (min-width: 1440px) {
     .testimoni {
-        padding-top: 2rem;
+        padding-top: 4rem;
         margin: 3rem 6rem;
+    }
+    .testimoni__title {
+        font-weight: 600;
+        font-size: 3.2rem;
+        margin-bottom: 6rem;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .testimoni {
+        margin: 0;
     }
 }
