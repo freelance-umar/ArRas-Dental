@@ -75,6 +75,7 @@
     border-radius: 9999px 9999px 9999px 0;
     top: -2.74rem;
     padding: 1.5rem 6rem;
+    transition: all 0.3s ease;
 }
 .doctors__schedule__inner {
     display: flex;
@@ -124,5 +125,41 @@
     }
     .doctors__swiper__arrow__left {
         left: 0;
+    }
+
+    .doctors__schedule {
+        margin: 0 6rem;
+        border: 3px solid transparent;
+    }
+    .doctors__schedule:hover, .doctors__schedule:hover .doctors__schedule__tip {
+        border: 3px solid var(--color-accent);
+    }
+    .doctors__schedule:hover .doctors__schedule__tip {
+        padding-left: 8rem;
+        padding-right: 8rem;
+        color: var(--color-accent);
+    }
+    .doctors__schedule__tip {
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 9999px;
+    }
+    .doctors__schedule__inner {
+        display: grid;
+        grid-template-rows: repeat(2, auto); 
+        grid-auto-flow: column;              
+        grid-auto-columns: auto;             
+        /* gap: 0.5rem;                            */
+    }
+    .doctors__schedule__day {
+        gap: 1rem;
+    }
+    .doctors__schedule__day h1 {
+        font-size: 2.4rem;
+        min-width: max-content;
+    }
+    .doctors__schedule__day__doctor h3 {
+        font-size: 1.6rem;
+        white-space: nowrap;
     }
 }
