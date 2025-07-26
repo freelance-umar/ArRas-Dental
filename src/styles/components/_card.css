@@ -5,6 +5,7 @@
     min-width: 46.2rem;
     border-radius: 1.5rem;
     display: flex;
+    flex: 0 0 auto;
     /* height: max-content; */
 }
 .testimoni__card:hover {

@@ -23,6 +23,7 @@
 @import "./sections/_doctor.css";
 @import "./sections/_recall.css";
 @import "./sections/_galeri.css";
+@import "./sections//_footer.css";
 /* 3,5. Menu */
 main {
     position: relative;
@@ -61,94 +62,6 @@ main {
 .mobile__menu__back {
     color: var(--color-secondary) !important;
     max-width: fit-content !important;
-}
-
-/* Footer */
-footer {
-    border-top: 5px solid var(--color-secondary);
-    width: 100%;
-    display: flex;
-    padding: 6rem 4rem;
-    background-color: var(--color-primary);
-}
-.footer__header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 4rem;
-}
-.footer__header__company__icon {
-    width: 6.4rem;
-    height: 5.5rem;
-}
-.footer__header__company {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2.5rem;
-}
-.footer__header__company__name > div {
-    font-family: inherit;
-    line-height: 100%;
-    font-weight: 600;
-    font-size: 2.4rem;
-    color: white;
-}
-.footer__header__company__name > div > span {
-    font-weight: 800;
-}
-.footer__header__desc {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 120%;
-    text-align: justify;
-    color: white;
-    margin-bottom: 2.5rem;
-    font-size: 1.4rem;
-}
-.footer__header__copyright {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
-    line-height: 100%;
-    text-align: justify;
-    color: #FFFFFF80;
-}
-.footer__header__2 {
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-.footer__header__2_content {
-    display: flex;
-    gap: 2rem;
-    color: white;
-}
-.footer__header__2_content > img {
-    color: white;
-}
-.footer__header__2__desc > h1 {
-    font-family: inherit;
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-align: justify;
-}
-.footer__header__2__desc > h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    /* text-align: justify; */
-    text-wrap-style: auto;
-}
-.footer__maps {
-    grid-column: 1 / -1;
-    height: 28.2rem;
-    border-radius: 2rem;
-}
-.footer__maps > iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
 }
 /* body {
     border: 3px red dotted;

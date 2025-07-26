@@ -76,36 +76,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Testimoni
-    const track = document.querySelector('.testimoni__body__content');
+const track = document.querySelector('.testimoni__body__content');
 
-    // Clone for seamless looping
-    const clone = Array.from(track.children)
-    // track.parentNode.appendChild(clone);
-    clone.forEach(card => {
-      track.appendChild(card.cloneNode(true))
-    })
-    // track.appendChild(clone)
+// Clone once for seamless loop
+const originalCards = Array.from(track.children);
+originalCards.forEach(card => {
+  track.appendChild(card.cloneNode(true));
+});
 
-    const totalWidth = track.offsetWidth;
+// Wait until DOM paints to get full width
+    requestAnimationFrame(() => {
+      const totalWidth = track.scrollWidth / 2; // Only width of the original set
 
-    // Create GSAP timeline
-    const tl = gsap.timeline({ repeat: -1, ease: "none" });
+      gsap.set(track, { x: 0 });
 
-    tl.to('.testimoni__body__content', {
-      x: `-=${totalWidth}`,
-      duration: 30,
+      gsap.to(track, {
+        x: `-=${totalWidth}`,
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
+        }
+      });
+
+      // Pause on hover
+      const wrapper = document.querySelector('.testimoni__body');
+      wrapper.addEventListener('mouseenter', () => gsap.globalTimeline.pause());
+      wrapper.addEventListener('mouseleave', () => gsap.globalTimeline.play());
     });
 
-    // Pause on hover
-    const wrapper = document.querySelector('.testimoni__body');
-
-    wrapper.addEventListener('mouseenter', () => {
-      tl.pause();
-    });
-
-    wrapper.addEventListener('mouseleave', () => {
-      tl.play();
-    });
     // Swiper About
     new Swiper('.about__inner__body__gallery', {
       slidesPerView: 'auto',
