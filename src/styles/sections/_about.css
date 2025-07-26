@@ -56,7 +56,12 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
     padding-right: 1.6rem;
+    -ms-overflow-style: none;
 }
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit/Chromium */
+}
+.about__inner__body__gallery
 .about__inner__body__gallery__body {
     display: flex;
     gap: .5rem;

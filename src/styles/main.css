@@ -21,6 +21,7 @@
 @import "./sections/_service.css";
 @import "./sections/_laboratorium.css";
 @import "./sections/_doctor.css";
+@import "./sections/_recall.css";
 /* 3,5. Menu */
 main {
     position: relative;
@@ -61,42 +62,6 @@ main {
     max-width: fit-content !important;
 }
 
-/* 10. Recall */
-.recall {
-    border: 3px solid #CDDFF2;
-    border-radius: 2rem;
-    padding: 4rem;
-    margin: 1rem;
-}
-.recall__header {
-    display: flex;
-    gap: 4rem;
-    padding: 0 3.2rem;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-.recall__header__img {
-    width: 8rem;
-    height: 8rem;
-}
-.recall__header__img > img {
-    width: 100%;
-    height: 100%;
-}
-.recall__header > h2 {
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 100%;
-    color: #0D0D0D;
-    flex: 1;
-    text-align: justify;
-    text-wrap-style: pretty;
-}
-.recall__button {
-    display: flex;
-    gap: 1rem;
-}
 /* Gallery Klinik */
 .gallery__klinik {
     background-color: #ECF3FB;
