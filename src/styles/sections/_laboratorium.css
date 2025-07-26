@@ -178,3 +178,25 @@
         z-index: 10;
     }
 }
+@media only screen and (min-width: 1920px) {
+    .laboratorium {
+        margin: 3rem 0;
+        display: flex;
+        justify-content: flex-start; /* better with gap */
+        gap: 9rem;
+        align-items: center;
+    }
+    .swiper-container-lab {
+        width: 75rem;
+        flex-shrink: 0; /* prevent shrinking */
+        min-width: 0;         /* allow other flex items to shrink if needed */
+        max-width: none;
+    }
+    .laboratorium__caption {
+        flex: 1; /* allows it to grow, but not squeeze swiper */
+        min-width: 0; /* required to prevent overflow from text */
+    }
+    .laboratorium__gallery {
+        margin: -4rem 0 3rem 0;
+    }
+}
