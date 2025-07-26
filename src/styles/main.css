@@ -28,6 +28,13 @@
 main {
     position: relative;
 }
+@media only screen and (min-width: 1920px) {
+    main {
+        position: relative;
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+}
 .mobile__menu {
     position: fixed;
     top: 0;
@@ -63,13 +70,3 @@ main {
     color: var(--color-secondary) !important;
     max-width: fit-content !important;
 }
-/* body {
-    border: 3px red dotted;
-    padding-top: 3rem;
-}
-main {
-    display: none;
-}
-main div, footer {
-    display: none !important;
-} */
