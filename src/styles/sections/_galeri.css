@@ -40,10 +40,10 @@
     scrollbar-width: none; /* Firefox */
     cursor: grab;
     user-select: none;
-    border-width: 3px 0px 3px 0px;
+    /* border-width: 3px 0px 3px 0px;
     border-style: solid;
-    border-color: #96E930;
-    padding: 4rem 0;
+    border-color: #96E930; */
+    padding: 2rem 0;
     max-width: fit-content;
     margin: 0 auto;
 }
@@ -124,6 +124,9 @@
     }
     .relative {
         position: relative;
+    }
+    .gallery__klinik__btn__group {
+        display: none;
     }
 }
 @media only screen and (min-width: 1920px) {
