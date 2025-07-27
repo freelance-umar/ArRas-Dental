@@ -145,6 +145,48 @@
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+#modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none; /* makes it invisible to clicks until active */
+}
+
+#modalOverlay.active {
+  pointer-events: all;
+}
+
+#modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#cardModalContent {
+  position: absolute;
+  background: #252525;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  /* max-width: 320px; */
+  z-index: 10000;
+  display: flex;
+  gap: 1rem;
+  /* left: 50%; */
+  transform: translateX(-20%);
+  min-width: max-content;
+}
+#cardModalContent::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* position above modal box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #252525; /* same color as modal bg */
+}
+
 @media only screen and (min-width: 1440px) {
     .services {
         margin: 3rem 6rem;
