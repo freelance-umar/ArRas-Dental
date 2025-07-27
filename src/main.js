@@ -228,42 +228,61 @@ originalCards.forEach(card => {
       });
     });
     updateGallery('praktek');
-    // const imageGalleryKlinik = [
-    //   "image-1.jpg",
-    //   "image-2.jpg",
-    //   "image-3.jpg",
-    //   "image-4.jpg",
-    //   "image-5.jpg",
-    //   "image-6.jpg",
-    //   "image-7.jpg",
-    //   "image-8.jpg",
-    //   "image-9.jpg",
-    //   "image-10.jpg",
-    //   "image-11.jpg",
-    //   "image-12.jpg",
-    // ]
-    // function createKlinikImage(src, alt = 'Klinik Image') {
-    //   // Create the container div
-    //   const container = document.createElement('div');
-    //   container.classList.add('gallery__klinik__img');
 
-    //   // Create the img element
-    //   const img = document.createElement('img');
-    //   img.src = src;
-    //   img.alt = alt;
+    // Modal
+    const bottomModal = document.getElementById('bottomServiceModal');
+  const bottomModalBody = document.getElementById('bottomModalBody');
+  const closeBtn = document.querySelector('.close-button');
+  
+  const mobileModal = document.getElementById('mobileServiceModal');
+  const desktopModal = document.getElementById('desktopServiceModal');
+  const mobileModalBody = document.getElementById('mobileModalBody');
+  const desktopModalBody = document.getElementById('desktopModalBody');
 
-    //   // Append the image into the container
-    //   container.appendChild(img);
+  // Optional fallback descriptions if needed
+  const serviceDescriptions = {
+    "Pencabutan Gigi": "Pencabutan dengan topical dan local anastesi untuk meminimalisir nyeri.",
+    "Gigi Palsu": "Semua jenis gigi palsu siap dalam waktu maksimal 2 hari.",
+    "Tambal Gigi": "Tambal gigi untuk mengatasi kerusakan akibat karies atau trauma.",
+    "Bleaching": "Pemutihan gigi dengan metode terbaik, dengan atau tanpa sinar.",
+    "Karang Gigi": "Membersihkan karang gigi secara menyeluruh dan efektif.",
+    "Perawatan Saluran Akar": "Menjaga dan merawat jaringan akar gigi secara profesional.",
+    "Lab Pembuatan Gigi Palsu": "Klinik pertama di Kalimantan dengan lab pembuatan gigi sendiri.",
+    "Layanan Lainnya": "Hubungi kami untuk layanan khusus lainnya yang tersedia."
+  };
 
-    //   // Return the full element (so you can append it somewhere)
-    //   return container;
-    // }
-    // const gallery = document.querySelector('.gallery__klinik__swiper');
-    // imageGalleryKlinik.forEach(filename => {
-    //   const el = createKlinikImage(`/src/assets/images/optimized/gallery/${filename}`);
-    //   gallery.appendChild(el);
-    // });
+  document.querySelectorAll('.services__bottom__card').forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h1')?.innerText?.trim() || '';
+      const desc = card.querySelector('p')?.innerText?.trim() || serviceDescriptions[title] || '';
+      const img = card.querySelector('.image-wrap img');
+      const imgSrc = img ? img.getAttribute('src') : '';
+      const imgAlt = img ? img.getAttribute('alt') || title : '';
 
+      // Build modal content
+      bottomModalBody.innerHTML = `
+        <div style="display: flex; gap: 4rem; padding: 0 6rem; margin-bottom: 4rem;">
+          <img src="${imgSrc}" alt="${imgAlt}" style="width: 8rem; height: 8rem; object-fit: contain; margin-bottom: 1rem;" />
+          <div>
+            <h2 style="font-family: inherit; font-weight: 600; font-size: 2.4rem; color: var(--color-primary);">${title}</h2>
+            <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.6rem; color: #434343;">${desc}</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <button class="button button-primary button-full">Hubungi Admin 1</button>
+          <button class="button button-secondary button-full">Hubungi Admin 2</button>
+        </div>
+      `;
+      
+      bottomModal.style.display = 'block';
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => bottomModal.style.display = 'none';
+  window.onclick = (e) => {
+    if (e.target === bottomModal) bottomModal.style.display = 'none';
+  };
     const container = document.querySelector('.gallery__klinik__swiper__outer');
 
 let isDragging = false;
