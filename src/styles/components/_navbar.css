@@ -44,6 +44,27 @@
 .navbar__menu__desktop {
     display: none;
 }
+/* Mobile Layout */
+@media (min-width: 320px) and (max-width: 639px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  .navbar__company {
+    gap: 1rem;
+  }
+  .navbar__company__name > span:nth-child(1) {
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  .navbar__company__name > span:nth-child(2) {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .navbar__company__name > span:nth-child(4) {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .navbar__menu {
     display: none;

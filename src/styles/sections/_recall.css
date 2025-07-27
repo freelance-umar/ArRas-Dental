@@ -34,6 +34,27 @@
     display: flex;
     gap: 1rem;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+    .recall {
+        padding: 2rem;
+    }
+    .recall__header {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .recall__header__img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .recall__header h2 {
+        font-size: 1.6rem;
+        text-align: initial;
+        line-height: 120%;
+    }
+    .recall__button {
+        flex-direction: column;
+    }
+}
 @media only screen and (min-width: 1440px) {
     .recall {
         margin: 3rem 6rem;

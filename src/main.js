@@ -239,16 +239,16 @@ originalCards.forEach(card => {
       const imgAlt = img ? img.getAttribute('alt') || title : '';
 
       const modalContent = `
-        <div style="display: flex; gap: 4rem; padding: 6rem 6rem 0 6rem; margin-bottom: 4rem;">
-          <img src="${imgSrc}" alt="${imgAlt}" style="width: 8rem; height: 8rem; object-fit: contain; margin-bottom: 1rem;" />
+        <div class="mobile__modal__head">
+          <img class="mobile__modal__head__img" src="${imgSrc}" alt="${imgAlt}"/>
           <div>
-            <h2 style="font-family: inherit; font-weight: 600; font-size: 2.4rem; color: var(--color-primary);">${title}</h2>
-            <p style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.6rem; color: #434343;">${desc}</p>
+            <h2>${title}</h2>
+            <p>${desc}</p>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <button class="button button-primary button-full">Hubungi Admin 1</button>
-          <button class="button button-secondary button-full">Hubungi Admin 2</button>
+          <button class="button button-primary button-full button-sm">Hubungi Admin 1</button>
+          <button class="button button-secondary button-full button-sm">Hubungi Admin 2</button>
         </div>
       `;
 

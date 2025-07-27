@@ -157,6 +157,30 @@
     display: flex;
     gap: 1rem;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+    .about__inner {
+        padding: 4rem 1rem;
+    }
+    .about__inner__header > h1 {
+        font-size: 3.2rem;
+    }
+    .about__inner__header > h2 {
+        font-size: 4.8rem;
+        line-height: 100%;
+    }
+    .about__inner__body > p {
+        font-size: 1.4rem;
+    }
+    .about__inner__body__gallery__body > img {
+        width: 30rem;
+        min-width: 30rem;
+        height: 20rem;
+    }
+    .about__inner__body__gallery__body_last_item {
+        width: 15rem;
+        height: 20rem;
+    }
+}
 @media only screen and (min-width: 1440px) {
     .about {
         margin: 3rem 6rem;

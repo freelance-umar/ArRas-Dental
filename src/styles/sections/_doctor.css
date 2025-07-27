@@ -109,6 +109,37 @@
     color: white;
 }
 
+@media (min-width: 320px) and (max-width: 639px) {
+    .doctors {
+        padding: 4rem 1rem;
+    }
+    .doctors__header h2 {
+        font-size: 2.8rem;
+    }
+    .doctors__header h1 {
+        font-size: 4.8rem;
+    }
+    .doctors__schedule__tip {
+        padding: 1.5rem 3rem;
+    }
+    .doctors__schedule {
+        padding: 3rem 1.5rem;
+    }
+    .doctors__schedule__day {
+        gap: 1rem;
+    }
+    .doctors__schedule__day > h1 {
+        font-size: 2.3rem;
+    }
+    .doctors__schedule__day__doctor {
+        gap: 1rem;
+    }
+    .doctors__schedule__day__doctor h3 {
+        font-size: 1.8rem;
+        line-height: 120%;
+    }
+}
+
 @media only screen and (min-width: 1440px) {
     .doctors {
         margin: 0 6rem;

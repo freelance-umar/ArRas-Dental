@@ -85,6 +85,41 @@ footer {
     height: 100%;
     border-radius: 2rem;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+    footer {
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+    .footer__header {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .footer__header__company {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .footer__header__company__name div {
+        font-size: 1.8rem;
+    }
+    .footer__header__desc {
+        font-size: 1.2rem;
+    }
+    .footer__header__copyright {
+        font-size: 1.2rem;
+    }
+    .footer__header__2 {
+        gap: 1rem   ;
+    }
+    .footer__header__2_content {
+        gap: 1.5rem;
+    }
+    .footer__header__2__desc h1 {
+        font-size: 1.4rem;
+    }   
+    .footer__header__2__desc h2 {
+        font-size: 1.2rem;
+    }
+}
 @media only screen and (min-width: 1440px) {
     footer {
         padding: 6rem;

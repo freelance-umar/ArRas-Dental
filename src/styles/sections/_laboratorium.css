@@ -148,7 +148,29 @@
     border-radius: 2rem;
     overflow: hidden;
 }
-
+@media (min-width: 320px) and (max-width: 639px) {
+    .laboratorium {
+        padding: 2rem 1rem;
+    }
+    .swiper-container-lab {
+        height: 30rem;
+    }
+    .laboratorium__caption h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .laboratorium__caption h1 {
+        font-size: 3.6rem;
+        line-height: 100%;
+    }
+    .laboratorium__gallery {
+        padding: 2rem;
+    }
+    .laboratorium__gallery__img {
+        width: 20rem;
+        height: 25rem;
+    }
+}
 @media only screen and (min-width: 640px) {
     .laboratorium__caption__button {
         flex-direction: row;

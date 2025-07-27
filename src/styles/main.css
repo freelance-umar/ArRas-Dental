@@ -76,3 +76,12 @@ body.modal-open {
     color: var(--color-secondary) !important;
     max-width: fit-content !important;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+    .mobile__menu__content {
+        padding-top: 3rem;
+    }
+    .mobile__menu__content h1 {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+}

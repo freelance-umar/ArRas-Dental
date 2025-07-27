@@ -186,7 +186,68 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid #252525; /* same color as modal bg */
 }
-
+.mobile__modal__head {
+    display: flex; 
+    gap: 4rem; 
+    padding: 6rem 6rem 0 6rem; 
+    margin-bottom: 4rem;
+    align-items: center;
+}
+.mobile__modal__head__img {
+    width: 8rem; 
+    height: 8rem; 
+    object-fit: contain; 
+    margin-bottom: 1rem;
+}
+.mobile__modal__head div h2 {
+    font-family: inherit; 
+    font-weight: 600; 
+    font-size: 2.4rem; 
+    color: var(--color-primary);
+}
+.mobile__modal__head div p {
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400; 
+    font-size: 1.6rem; 
+    color: #434343;
+}
+@media (min-width: 320px) and (max-width: 639px) {
+    .services__header {
+        padding: 4rem 0 0 0;
+        margin-bottom: 2rem;
+    }
+    .services__header__caption h2 {
+        font-size: 3.6rem;
+    }
+    .services__header__caption h1 {
+        font-size: 4.8rem;
+        line-height: 100%;
+    }
+    .services__header__caption p {
+        font-size: 1.6rem;
+    }
+    .services__header__button {
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+    .modal-content {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    .mobile__modal__head {
+        padding: 2rem;
+        gap: 1rem;
+        margin: 0;
+    }
+    .mobile__modal__head div h2 {
+        font-size: 1.8rem;
+    }
+    .mobile__modal__head div p {
+        font-size: 1.4rem;
+    }
+    .mobile__modal__head__img {
+        margin: 0;
+    }
+}
 @media only screen and (min-width: 1440px) {
     .services {
         margin: 3rem 6rem;
