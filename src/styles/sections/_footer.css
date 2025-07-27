@@ -123,4 +123,10 @@ footer {
         max-width: 152rem;
         margin: 0 auto;
     }
+    .footer__maps iframe {
+        max-width: 70rem;
+    }
+    .footer__header {
+        grid-template-columns: minmax(0, 30rem) 6rem 28.6rem 1fr minmax(0, 70rem);
+    }
 }

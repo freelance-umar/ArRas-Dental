@@ -28,6 +28,7 @@
     border-color: #6B36B8;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    position: relative;
 }
 .about__inner__body > p {
     font-family: 'Inter', sans-serif;
@@ -59,6 +60,14 @@
     padding-right: 1.6rem;
     -ms-overflow-style: none;
     padding-right: 1.5rem;
+}
+.scroll-left-desktop {
+    position: absolute;
+    top: 50%;
+    right: -2.4rem;
+    z-index: 10;
+    transform: translateY(-50%);
+    display: none;
 }
 ::-webkit-scrollbar {
   display: none; /* Hides scrollbar in WebKit/Chromium */
@@ -176,5 +185,8 @@
     }
     .about__inner {
         padding: 11rem 8rem;
+    }
+    .scroll-left-desktop {
+        display: block;
     }
 }

@@ -79,7 +79,15 @@
 .gallery__klinik__arrow__right {
     display: none;
 }
-
+.gallery__klinik__arrow__left{
+    display: none;
+}
+.gallery__klinik__btn__group {
+    display: flex; 
+    gap: 1rem; 
+    justify-content: 
+    end; margin-bottom: 2rem;
+}
 @media only screen and (min-width: 1440px) {
     .gallery__klinik {
         margin: 3rem 6rem 2rem 6rem;
@@ -132,5 +140,13 @@
 @media only screen and (min-width: 1920px) {
     .gallery__klinik {
         margin: 0 0 14.2rem 0;
+    }
+    .gallery__klinik__arrow__left {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -2rem;
+        z-index: 10;
     }
 }
