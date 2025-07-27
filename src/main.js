@@ -289,10 +289,12 @@ originalCards.forEach(card => {
       if (window.innerWidth <= 1440) {
         mobileModalBody.innerHTML = modalContent;
         mobileModal.style.display = 'block';
+        document.body.classList.add('modal-open');
       } else {
         
         overlay.classList.add('active');
         overlay.style.display = 'block';
+        document.body.classList.add('modal-open');
       }
     });
   });
@@ -302,16 +304,21 @@ originalCards.forEach(card => {
     btn.onclick = () => {
       mobileModal.style.display = 'none';
       // desktopModal.style.display = 'none';
+      document.body.classList.remove('modal-open');
     };
   });
 
   window.onclick = (e) => {
-    if (e.target === mobileModal) mobileModal.style.display = 'none';
+    if (e.target === mobileModal) {
+      mobileModal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
   };
   // Close when clicking outside
   backdrop.addEventListener('click', () => {
     overlay.classList.remove('active');
     overlay.style.display = 'none';
+    document.body.classList.remove('modal-open');
   });
 
   // Manual Drag
