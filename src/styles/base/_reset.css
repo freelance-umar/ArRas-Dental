@@ -13,7 +13,9 @@ html {
 * {
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+}
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
