@@ -118,3 +118,9 @@ footer {
   border: none;
 }
 }
+@media only screen and (min-width: 1920px) {
+    .footer__header {
+        max-width: 152rem;
+        margin: 0 auto;
+    }
+}

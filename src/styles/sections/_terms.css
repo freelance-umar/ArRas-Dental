@@ -1,0 +1,74 @@
+.terms {
+    padding: 2rem;
+    border: 3px solid #CDDFF2;
+    margin: 1rem;
+    border-radius: 2rem;
+    text-align: justify;
+}
+.terms h1 {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 100%;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+.terms p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+}
+.terms ol {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+}
+ol {
+    padding-inline-start: 1.8rem;
+}
+ol > li > ul {
+    margin-left: 1rem; 
+    padding-left: 1rem; 
+}
+ul li::marker {
+  color: black;        
+}
+.terms h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    margin-top: 2rem;
+}
+@media only screen and (min-width: 1440px) {
+    .terms {
+        margin: 3rem 6rem;
+        padding: 4rem;
+    }
+    .terms h1 {
+        font-size: 2.8rem;
+    }
+    .terms p {
+        font-size: 1.6rem;
+    }
+    .terms ol {
+        font-size: 1.6rem;
+    }
+    .terms h3 {
+        font-size: 2.6rem;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .terms {
+        margin: 3rem 0.1rem;
+        padding: 6rem 8rem;
+        margin-bottom: 20rem;
+    }
+    .terms h1 {
+        font-size: 3.2rem;
+    }
+
+}

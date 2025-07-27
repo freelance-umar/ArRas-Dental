@@ -59,6 +59,9 @@
     border-radius: 20px;
     object-position: center;
 }
+.hero__header__outer a {
+    text-decoration: none;
+}
 .hero__header {
     padding: 6rem 4rem 2rem 4rem;
 }

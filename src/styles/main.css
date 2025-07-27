@@ -24,6 +24,7 @@
 @import "./sections/_recall.css";
 @import "./sections/_galeri.css";
 @import "./sections//_footer.css";
+@import "./sections/_terms.css";
 /* 3,5. Menu */
 main {
     position: relative;
