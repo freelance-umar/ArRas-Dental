@@ -32,6 +32,7 @@ main {
 body.modal-open {
   overflow: hidden;
   height: 100%;
+  touch-action: none;
 }
 @media only screen and (min-width: 1920px) {
     main {
