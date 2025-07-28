@@ -19,7 +19,25 @@ export function initModal () {
     "Lab Pembuatan Gigi Palsu": "Klinik pertama di Kalimantan dengan lab pembuatan gigi sendiri.",
     "Layanan Lainnya": "Hubungi kami untuk layanan khusus lainnya yang tersedia."
   };
+  document.querySelectorAll('.services__card').forEach(card => {
+    card.addEventListener('click', () => {
+      const rect = card.getBoundingClientRect();
 
+      modalContentDesktop.innerHTML = `
+         <button class="button button-primary">Hubungi Admin 1</button>
+         <button class="button button-secondary">Hubungi Admin 2</button>
+      `;
+
+      // Position modal near the card (e.g., below it)
+      modalContentDesktop.style.top = `${rect.bottom + 10}px`;
+      modalContentDesktop.style.left = `${rect.left + 250}px`;
+      if (window.innerWidth >= 1920) {
+        overlay.classList.add('active');
+        overlay.style.display = 'block';
+        document.body.classList.add('modal-open');
+      }
+    })
+  });
   document.querySelectorAll('.services__bottom__card').forEach(card => {
     card.addEventListener('click', () => {
       const title = card.querySelector('h1')?.innerText?.trim() || '';
@@ -56,12 +74,12 @@ export function initModal () {
 
       
       // Responsive logic
-      if (window.innerWidth <= 1440) {
+      if (window.innerWidth <= 640) {
         mobileModalBody.innerHTML = modalContent;
         mobileModal.style.display = 'block';
         document.body.classList.add('modal-open');
-      } else {
-        
+      } 
+      else if (window.innerWidth >= 1920) {
         overlay.classList.add('active');
         overlay.style.display = 'block';
         document.body.classList.add('modal-open');

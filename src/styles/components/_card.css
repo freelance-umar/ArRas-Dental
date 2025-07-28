@@ -129,6 +129,12 @@
     position: relative;
     cursor: pointer;
     height: 25rem;
+    transition: all ease-in-out 100ms;
+    border: 3px solid transparent;
+}
+.services__bottom__card:hover {
+    border: 3px solid #CDDFF2;
+    background-color: white;
 }
 .services__bottom__card > .image-wrap {
     display: flex;
