@@ -28,7 +28,7 @@
     position: relative;
 }
 .doctors__swiper {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem !important;
     border-width: 3px 0px 3px 0px;
     border-style: solid;
     border-color: #F335A7;
