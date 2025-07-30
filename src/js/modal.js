@@ -108,4 +108,25 @@ export function initModal () {
     overlay.style.display = 'none';
     document.body.classList.remove('modal-open');
   });
+  const overlayTestimoni = document.getElementById('modalOverlayTestimoni');
+  const modalContentDesktopTestimoni = document.getElementById('cardModalContentTestimoni');
+  const backdropTestimoni = document.getElementById('modalBackdropTestimoni');
+  document.querySelectorAll(".testimoni__card__video").forEach(card => 
+    card.addEventListener('click', () => {
+    if (window.innerWidth >= 1920) {
+        overlayTestimoni.classList.add('active');
+        overlayTestimoni.style.display = 'block';
+        document.body.classList.add('modal-open');
+      }
+      // console.log('halo')
+  } 
+  ));
+  // console.log('halo');
+  // );
+  backdropTestimoni.addEventListener('click', () => {
+    overlayTestimoni.classList.remove('active');
+    overlayTestimoni.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  } 
+);
 }

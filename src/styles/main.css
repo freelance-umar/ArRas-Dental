@@ -25,9 +25,42 @@
 @import "./sections/_galeri.css";
 @import "./sections//_footer.css";
 @import "./sections/_terms.css";
-/* 3,5. Menu */
+/* Mische. */
 main {
     position: relative;
+}
+.arrow-up-big {
+    display: none;
+}
+@media only screen and (min-width: 1920px) {
+    .arrow-up-big {
+        position: fixed;
+        bottom: 2rem;
+        right: 8.6rem;
+        z-index: 1000;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        border-radius: 99999px;
+        /* padding-top: 4rem; */
+        background-color: #FFFFFF;
+        width: 4.8rem;
+        height: 23rem;
+        justify-content: end;
+    }
+    .arrow-up-big > div {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: var(--color-primary);
+        /* margin-bottom: 6rem; */
+        transform: rotate(-90deg);
+        flex: 0 0 auto;
+        text-wrap: nowrap;
+    }
 }
 body.modal-open {
   overflow: hidden;
@@ -84,4 +117,34 @@ body.modal-open {
         font-size: 2rem;
         line-height: 120%;
     }
+}
+#modalOverlayTestimoni {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none; /* makes it invisible to clicks until active */
+
+    &.active {
+        pointer-events: all;
+    }
+}
+
+#modalBackdropTestimoni {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#cardModalContentTestimoni img {
+    position: absolute;
+    background: #252525;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 10000;
+    transform: translateX(-50%);
+    min-width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

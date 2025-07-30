@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
     border-bottom: 3px solid #CDDFF2;
     padding: 3rem 6rem;
@@ -5,101 +6,121 @@
     top: 0;
     z-index: 50;
     background-color: white;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        padding: 1rem 2rem;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        padding: 3rem 0;
+    }
 }
+
 .navbar__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (min-width: 1440px) {
+        gap: 5rem;
+    }
 }
+
 .navbar__company {
     display: flex;
     align-items: center;
     gap: 2rem;
     color: #222222;
+
+    & > img {
+        width: 61px;
+        height: 52px;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1rem;
+    }
 }
-.navbar__company__name > span:nth-child(1), span:nth-child(2), span:nth-child(4) {
-    font-family: inherit;
-    
-    line-height: 100%;
+
+.navbar__company__name {
+    & > span:nth-child(1),
+    & > span:nth-child(2),
+    & > span:nth-child(4) {
+        font-family: inherit;
+        line-height: 100%;
+    }
+
+    & > span:nth-child(1) {
+        font-weight: 800;
+        font-size: 2.4rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-weight: 800;
+            font-size: 2rem;
+        }
+    }
+
+    & > span:nth-child(2) {
+        font-weight: 600;
+        font-size: 2.4rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    }
+
+    & > span:nth-child(4) {
+        font-weight: 600;
+        font-size: 1.6rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    }
 }
-.navbar__company__name > span:nth-child(1) {
-    font-weight: 800;
-    font-size: 2.4rem;
-}
-.navbar__company__name > span:nth-child(2) {
-    font-weight: 600;
-    font-size: 2.4rem;
-}
-.navbar__company__name > span:nth-child(4) {
-    font-weight: 600;
-    font-size: 1.6rem;
-}
-.navbar__company > img {
-    width: 61px;
-    height: 52px;
-}
+
 .navbar__menu {
     width: 48px;
+
+    @media only screen and (min-width: 1440px) {
+        display: none;
+    }
 }
+
 .navbar__menu__desktop {
     display: none;
-}
-/* Mobile Layout */
-@media (min-width: 320px) and (max-width: 639px) {
-  .navbar {
-    padding: 1rem 2rem;
-  }
-  .navbar__company {
-    gap: 1rem;
-  }
-  .navbar__company__name > span:nth-child(1) {
-    font-weight: 800;
-    font-size: 2rem;
-  }
-  .navbar__company__name > span:nth-child(2) {
-    font-weight: 600;
-    font-size: 2rem;
-  }
-  .navbar__company__name > span:nth-child(4) {
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .navbar__menu {
-    display: none;
-  }
 
-  .mobile__menu {
-    display: none;
-  }
-  .navbar__menu__desktop {
-    display: flex;
-    flex: 1;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar__menu__desktop a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-  .navbar__inner {
-    gap: 5rem;
-    
-  }
+    @media only screen and (min-width: 1440px) {
+        display: flex;
+        flex: 1;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+
+        & a {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        flex: initial;
+    }
 }
-@media only screen and (min-width: 1920px) {
-  .navbar {
-    padding: 3rem 0;
-  }
-  .navbar__menu__desktop {
-    flex: initial;
-  }
-  .navbar__menu__desktop__btn {
-    margin-left: 1rem;
-  }
+
+.navbar__menu__desktop__btn {
+    @media only screen and (min-width: 1920px) {
+        margin-left: 1rem;
+    }
+}
+
+.mobile__menu {
+    @media only screen and (min-width: 1440px) {
+        display: none;
+    }
 }

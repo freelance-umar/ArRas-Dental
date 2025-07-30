@@ -1,32 +1,65 @@
-/* 9. Doctors Section*/
+/* Doctors Section */
 .doctors {
     background-color: #FFEFFE;
     border-radius: 2rem;
     padding: 8rem 2rem;
     margin: 3rem 1rem 0rem 1rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        padding: 4rem 1rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        margin: 0 6rem;
+        display: flex;
+        gap: 4rem;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        margin: 0;
+    }
 }
+
 .doctors__header {
     padding: 2rem 1rem;
+
+    & > h2 {
+        font-family: inherit;
+        font-weight: 300;
+        font-size: 4rem;
+        line-height: 100%;
+        color: var(--color-primary);
+        margin-bottom: 4rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 2.8rem;
+        }
+    }
+
+    & > h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 6.4rem;
+        line-height: 6.4rem;
+        color: var(--color-primary);
+        margin-bottom: 2rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 4.8rem;
+        }
+    }
 }
-.doctors__header > h2 {
-    font-family: inherit;
-    font-weight: 300;
-    font-size: 4rem;
-    line-height: 100%;
-    color: var(--color-primary);
-    margin-bottom: 4rem;
-}
-.doctors__header > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 6.4rem;
-    line-height: 6.4rem;
-    color: var(--color-primary);
-    margin-bottom: 2rem;
-}
+
 .doctors__swiper_wrap {
     position: relative;
+
+    @media only screen and (min-width: 1440px) {
+        scrollbar-width: none;
+        overflow: scroll;
+        padding: 0 1rem;
+    }
 }
+
 .doctors__swiper {
     padding: 4rem 1rem !important;
     border-width: 3px 0px 3px 0px;
@@ -42,25 +75,66 @@
     left: -0.2rem;
     top: 25rem;
     z-index: 10;
+
+    @media only screen and (min-width: 1440px) {
+        left: 0;
+    }
 }
+
 .doctors__swiper__arrow__right {
     position: absolute;
     right: -1rem;
     top: 25rem;
     z-index: 10;
+
+    @media only screen and (min-width: 1440px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        display: block;
+        right: 0;
+    }
 }
+
 .doctors__swiper__content {
     display: flex;
     gap: 1rem;
     min-width: max-content;
 }
+
 .doctors__schedule {
     background-color: var(--color-primary);
     border-radius: 2rem;
     padding: 6rem;
     position: relative;
     margin: 0 1rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        padding: 3rem 1.5rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        margin: 0 6rem;
+        border: 3px solid transparent;
+
+        &:hover {
+            border: 3px solid var(--color-accent);
+
+            & .doctors__schedule__tip {
+                border: 3px solid var(--color-accent);
+                padding-left: 8rem;
+                padding-right: 8rem;
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        margin: 0;
+    }
 }
+
 .doctors__schedule__tip {
     border: 3px solid var(--color-primary);
     position: absolute;
@@ -76,133 +150,88 @@
     top: -2.74rem;
     padding: 1.5rem 6rem;
     transition: all 0.3s ease;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        padding: 1.5rem 3rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 9999px;
+    }
 }
+
 .doctors__schedule__inner {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+
+    @media only screen and (min-width: 1440px) {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+    }
 }
+
 .doctors__schedule__day {
     display: flex;
     gap: 3rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        gap: 1rem;
+    }
+
+    & > h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 100%;
+        color: white;
+        min-width: 10rem;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 2.3rem;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            font-size: 2.4rem;
+            min-width: max-content;
+        }
+    }
 }
-.doctors__schedule__day > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2.8rem;
-    line-height: 100%;
-    color: white;
-    min-width: 10rem;
-}
+
 .doctors__schedule__day__doctor {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: .4rem;
-}
-.doctors__schedule__day__doctor h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    font-style: italic;
-    line-height: 100%;
-    color: white;
-}
 
-@media (min-width: 320px) and (max-width: 639px) {
-    .doctors {
-        padding: 4rem 1rem;
-    }
-    .doctors__header h2 {
-        font-size: 2.8rem;
-    }
-    .doctors__header h1 {
-        font-size: 4.8rem;
-    }
-    .doctors__schedule__tip {
-        padding: 1.5rem 3rem;
-    }
-    .doctors__schedule {
-        padding: 3rem 1.5rem;
-    }
-    .doctors__schedule__day {
+    @media (min-width: 320px) and (max-width: 639px) {
         gap: 1rem;
     }
-    .doctors__schedule__day > h1 {
-        font-size: 2.3rem;
-    }
-    .doctors__schedule__day__doctor {
-        gap: 1rem;
-    }
-    .doctors__schedule__day__doctor h3 {
-        font-size: 1.8rem;
-        line-height: 120%;
-    }
-}
 
-@media only screen and (min-width: 1440px) {
-    .doctors {
-        margin: 0 6rem;
-        display: flex;
-        gap: 4rem;
-    }
-    .doctors__swiper_wrap {
-        scrollbar-width: none;
-        overflow: scroll;
-        padding: 0 1rem;
-    }
-    .doctors__swiper__arrow__right {
-        display: none;
-    }
-    .doctors__swiper__arrow__left {
-        left: 0;
-    }
+    & h3 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 100%;
+        color: white;
 
-    .doctors__schedule {
-        margin: 0 6rem;
-        border: 3px solid transparent;
-    }
-    .doctors__schedule:hover, .doctors__schedule:hover .doctors__schedule__tip {
-        border: 3px solid var(--color-accent);
-    }
-    .doctors__schedule:hover .doctors__schedule__tip {
-        padding-left: 8rem;
-        padding-right: 8rem;
-        color: var(--color-accent);
-    }
-    .doctors__schedule__tip {
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 9999px;
-    }
-    .doctors__schedule__inner {
-        display: grid;
-        grid-template-rows: repeat(2, auto); 
-        grid-auto-flow: column;              
-        grid-auto-columns: auto;             
-        /* gap: 0.5rem;                            */
-    }
-    .doctors__schedule__day {
-        gap: 1rem;
-    }
-    .doctors__schedule__day h1 {
-        font-size: 2.4rem;
-        min-width: max-content;
-    }
-    .doctors__schedule__day__doctor h3 {
-        font-size: 1.6rem;
-        white-space: nowrap;
-    }
-}
-@media only screen and (min-width: 1920px) {
-    .doctors {
-        margin: 0;
-    }
-    .doctors__swiper__arrow__right {
-        display: block;
-        right: 0;
-    }
-    .doctors__schedule {
-        margin: 0;
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 1.8rem;
+            line-height: 120%;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            font-size: 1.6rem;
+            white-space: nowrap;
+        }
     }
 }

@@ -5,33 +5,84 @@ footer {
     display: flex;
     padding: 6rem 4rem;
     background-color: var(--color-primary);
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        padding: 6rem;
+    }
 }
+
 .footer__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 4rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        display: grid;
+        grid-template-columns: minmax(0, 30rem) 6rem 28.6rem 1fr minmax(0, 51.4rem);
+        column-gap: 0;
+        width: 100%;
+        align-items: start;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        max-width: 152rem;
+        margin: 0 auto;
+        grid-template-columns: minmax(0, 30rem) 6rem 28.6rem 1fr minmax(0, 70rem);
+    }
 }
-.footer__header__company__icon {
-    width: 6.4rem;
-    height: 5.5rem;
+
+.footer__header__1 {
+    @media only screen and (min-width: 1440px) {
+        grid-column: 1;
+    }
 }
+
 .footer__header__company {
     display: flex;
     gap: 2rem;
     align-items: center;
     margin-bottom: 2.5rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
-.footer__header__company__name > div {
-    font-family: inherit;
-    line-height: 100%;
-    font-weight: 600;
-    font-size: 2.4rem;
-    color: white;
+
+.footer__header__company__icon {
+    width: 6.4rem;
+    height: 5.5rem;
 }
-.footer__header__company__name > div > span {
-    font-weight: 800;
+
+.footer__header__company__name {
+    & > div {
+        font-family: inherit;
+        line-height: 100%;
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: white;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 1.8rem;
+        }
+
+        & > span {
+            font-weight: 800;
+        }
+    }
 }
+
 .footer__header__desc {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -40,128 +91,105 @@ footer {
     color: white;
     margin-bottom: 2.5rem;
     font-size: 1.4rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        font-size: 1.2rem;
+    }
 }
+
 .footer__header__copyright {
     font-family: 'Inter', sans-serif;
     font-size: 1.4rem;
     line-height: 100%;
     text-align: justify;
     color: #FFFFFF80;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        font-size: 1.2rem;
+    }
 }
+
 .footer__header__2 {
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        grid-column: 3;
+    }
 }
+
 .footer__header__2_content {
     display: flex;
     gap: 2rem;
     color: white;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        gap: 1.5rem;
+    }
+
+    & > img {
+        color: white;
+        max-width: 4.5rem;
+    }
 }
-.footer__header__2_content > img {
-    color: white;
+
+.footer__header__2__desc {
+    & > h1 {
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: justify;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    & > h2 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-wrap-style: auto;
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            font-size: 1.2rem;
+        }
+    }
 }
-.footer__header__2__desc > h1 {
-    font-family: inherit;
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-align: justify;
-}
-.footer__header__2__desc > h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    /* text-align: justify; */
-    text-wrap-style: auto;
-}
+
 .footer__maps {
     grid-column: 1 / -1;
     height: 28.2rem;
     border-radius: 2rem;
-}
-.footer__maps > iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-}
-@media (min-width: 320px) and (max-width: 639px) {
-    footer {
-        flex-direction: column;
-        padding: 4rem 2rem;
+
+    @media only screen and (min-width: 1440px) {
+        grid-column: 5;
     }
-    .footer__header {
-        gap: 1rem;
-        grid-template-columns: 1fr;
-    }
-    .footer__header__company {
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    .footer__header__company__name div {
-        font-size: 1.8rem;
-    }
-    .footer__header__desc {
-        font-size: 1.2rem;
-    }
-    .footer__header__copyright {
-        font-size: 1.2rem;
-    }
-    .footer__header__2 {
-        gap: 1rem   ;
-    }
-    .footer__header__2_content {
-        gap: 1.5rem;
-    }
-    .footer__header__2__desc h1 {
-        font-size: 1.4rem;
-    }   
-    .footer__header__2__desc h2 {
-        font-size: 1.2rem;
-    }
-}
-@media only screen and (min-width: 1440px) {
-    footer {
-        padding: 6rem;
-    }
-   .footer__header {
-        display: grid;
-        grid-template-columns: minmax(0, 30rem) 6rem 28.6rem 1fr minmax(0, 51.4rem);
-        column-gap: 0;
+
+    & > iframe {
         width: 100%;
-        align-items: start;
+        height: 100%;
+        border-radius: 2rem;
     }
 
-.footer__header__1 {
-  grid-column: 1;
-}
+    & iframe {
+        @media only screen and (min-width: 1440px) {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            max-width: 51.4rem;
+            display: block;
+            border: none;
+        }
 
-.footer__header__2 {
-  grid-column: 3;
-}
-
-.footer__maps {
-  grid-column: 5;
-}
-
-.footer__maps iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  max-width: 51.4rem;
-  display: block;
-  border: none;
-}
-}
-@media only screen and (min-width: 1920px) {
-    .footer__header {
-        max-width: 152rem;
-        margin: 0 auto;
-    }
-    .footer__maps iframe {
-        max-width: 70rem;
-    }
-    .footer__header {
-        grid-template-columns: minmax(0, 30rem) 6rem 28.6rem 1fr minmax(0, 70rem);
+        @media only screen and (min-width: 1920px) {
+            max-width: 70rem;
+        }
     }
 }

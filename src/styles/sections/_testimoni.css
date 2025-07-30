@@ -2,40 +2,42 @@
 .testimoni {
     padding-top: 2rem;
     margin: 1rem;
-}
-.testimoni__title {
-    font-family: inherit;
-    color: var(--color-primary);
-    font-weight: 300;
-    font-size: 2rem;
-    line-height: 3.2rem;
-    margin-bottom: 3rem;
-}
-.testimoni__body {
-    overflow: hidden;
-    scrollbar-width: none;
-}
-.testimoni__body__content {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    /* grid-template-columns: repeat(5, auto); */
-    grid-auto-flow: column;
-    row-gap: 1rem;
-    column-gap: 1rem;
-}
-@media only screen and (min-width: 1440px) {
-    .testimoni {
+
+    .testimoni__title {
+        font-family: inherit;
+        color: var(--color-primary);
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .testimoni__body {
+        overflow: hidden;
+        scrollbar-width: none;
+
+        .testimoni__body__content {
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            /* grid-template-columns: repeat(5, auto); */
+            grid-auto-flow: column;
+            row-gap: 1rem;
+            column-gap: 1rem;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
         padding-top: 4rem;
         margin: 3rem 6rem;
+
+        .testimoni__title {
+            font-weight: 600;
+            font-size: 3.2rem;
+            margin-bottom: 6rem;
+        }
     }
-    .testimoni__title {
-        font-weight: 600;
-        font-size: 3.2rem;
-        margin-bottom: 6rem;
-    }
-}
-@media only screen and (min-width: 1920px) {
-    .testimoni {
+
+    @media only screen and (min-width: 1920px) {
         margin: 0;
         padding: 4rem 0;
     }

@@ -1,3 +1,4 @@
+/* Testimonial Card */
 .testimoni__card {
     padding: 3.4rem 3.5rem;
     background-color: #FAFAFA;
@@ -6,40 +7,86 @@
     border-radius: 1.5rem;
     display: flex;
     flex: 0 0 auto;
-    /* height: max-content; */
+
+    &:hover {
+        border: 3px solid #CDDFF2;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        padding: 2rem;
+    }
 }
-.testimoni__card:hover {
-    border: 3px solid #CDDFF2
-}
+
 .testimoni__card__inner {
     display: flex;
     gap: 2rem;
     align-items: center;
-}
-.testimoni__card__inner > img {
-    height: 7.2rem;
-    width: 7.2rem;
-}
-.testimoni__card__inner__text > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: normal;
-    color: var(--color-primary);
-}
-.testimoni__card__inner__text > p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: normal;
-    color: #707070;
-}
-@media (min-width: 320px) and (max-width: 639px) {
-    .testimoni__card {
-        padding: 2rem;
-        /* min-width: 30rem; */
+    flex: 1;
+    & > img {
+        height: 7.2rem;
+        width: 7.2rem;
     }
 }
+
+.testimoni__card__inner__text {
+    & > h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: normal;
+        color: var(--color-primary);
+    }
+
+    & > p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: normal;
+        color: #707070;
+    }
+}
+.testimoni__card__inner__text__desktop {
+    display: none;
+}
+.testimoni__card__inner__text__desktop:hover {
+    cursor: pointer;
+}
+.icon__play__wrap svg {
+    color: #CDDFF2;
+}
+.testimoni__card:hover svg {
+    color: var(--color-primary);
+}
+
+@media only screen and (min-width: 1440px) {
+    .testimoni__card__inner__text__desktop {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        /* text-align: center; */
+        flex: 1;
+        h1 {
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: normal;
+            color: var(--color-primary);
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: normal;
+            color: #707070;
+        }
+    }
+    .testimoni__card__inner__text__hide {
+        display: none !important;
+    }
+}
+
 /* Services Section Card */
 .services__card {
     display: flex;
@@ -48,77 +95,92 @@
     border-radius: 2rem;
     border: 3px solid transparent;
     transition: border-color 0.2s ease;
+
+    &:hover {
+        border-color: #CDDFF2;
+
+        & .services__card__body > h1 {
+            color: var(--color-secondary);
+        }
+
+        & .services__card_img_container {
+            transform: translateX(1.5rem);
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        & .services__card_img_container {
+            display: none;
+        }
+
+        & .services__card__body {
+            padding: 2rem 2rem 4rem 2rem;
+
+            & h1 {
+                margin-bottom: 1rem;
+                font-size: 2.8rem;
+            }
+        }
+    }
 }
-.services__card:hover {
-    border-color: #CDDFF2;
-}
-.services__card:hover .services__card__body > h1 {
-    color: var(--color-secondary);
-}
+
 .services__card_img_container {
     max-width: 26rem;
     max-height: 18rem;
     border-radius: 2rem;
     transition: transform 0.4s ease;
-    /* Prevent layout shifts */
     flex-shrink: 0;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
 }
-.services__card:hover .services__card_img_container {
-  transform: translateX(1.5rem);
-}
-.services__card_img_container > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2rem;
-}
+
 .services__card__body {
     padding: 3.2rem 2rem 3.9rem 0;
     position: relative;
+
+    & > h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 100%;
+        color: var(--color-primary);
+        margin-bottom: 2.5rem;
+    }
+
+    & > p {
+        font-family: 'Inter', sans-serif;
+        color: #626262;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 100%;
+        text-align: justify;
+    }
 }
+
 .service__card__body__click {
     position: absolute;
     right: 2rem;
 }
-.services__card__body > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 3.2rem;
-    line-height: 100%;
-    color: var(--color-primary);
-    margin-bottom: 2.5rem;
-}
-.services__card__body > p {
-    font-family: 'Inter', sans-serif;
-    color: #626262;
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 100%;
-    text-align: justify;
-}
-@media (min-width: 320px) and (max-width: 639px) {
-    .services__card_img_container {
-        display: none;
-    }
-    .services__card__body {
-        padding: 2rem 2rem 4rem 2rem;
-    }
-    .services__card__body h1 {
-        margin-bottom: 1rem;
-        font-size: 2.8rem;
-    }
-}
+
 .service__card__desktop__cursor {
     display: none;
-}
-@media only screen and (min-width: 1440px) {
-    .service__card__desktop__cursor {
+
+    @media only screen and (min-width: 1440px) {
         display: block;
     }
-    .service__card__mobile__cursor {
+}
+
+.service__card__mobile__cursor {
+    @media only screen and (min-width: 1440px) {
         display: none;
     }
 }
+
 /* Services Card bottom */
 .services__bottom__card {
     padding: 4.1rem 2rem;
@@ -131,100 +193,111 @@
     height: 25rem;
     transition: all ease-in-out 100ms;
     border: 3px solid transparent;
-}
-.services__bottom__card:hover {
-    border: 3px solid #CDDFF2;
-    background-color: white;
-}
-.services__bottom__card > .image-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-.services__bottom__card > h1 {
-    font-family: inherit;
-    color: var(--color-primary);
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 100%;
-    text-align: center;
-    margin-bottom: 1.2rem;
-}
-.services__bottom__card > p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 100%;
-}
-.services__bottom__card > .tooltip-gray {
-    position: absolute;
-    bottom: .95rem;
-    right: 0.95rem;
-}
 
-/* doctors card */
-.doctors__card {
-    max-width: 42rem;
-}
-.doctors__card__img {
-    border-radius: 2rem;
-    width: 42rem;
-    height: 50rem;
-}
-.doctors__card__img > img {
-    border-radius: 2rem;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: auto;
-    object-fit: cover;
-}
-.doctors__card__body {
-    padding-top: 3rem;
-}
-.doctors__card__body > h1 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 100%;
-    color: var(--color-primary);
-    margin-bottom: 1.5rem;
-}
-.doctors__card__body > h2 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 100%;
-    color: var(--color-accent);
-    margin-bottom: 3rem;
-}
-.doctors__card__body > ul {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.2;
-    color: #434343;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 25px;
-}
-@media (min-width: 320px) and (max-width: 639px) {
-    .doctors__card__img {
-        height: 40rem;
-        width: 32rem;
+    &:hover {
+        border: 3px solid #CDDFF2;
+        background-color: white;
     }
-    .doctors__card {
-        max-width: 33rem;
+
+    & > .image-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
     }
-}
-@media only screen and (min-width: 1440px) {
-    .services__bottom__card {
+
+    & > h1 {
+        font-family: inherit;
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    & > p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 100%;
+
+        @media only screen and (min-width: 1440px) {
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+    }
+
+    & > .tooltip-gray {
+        position: absolute;
+        bottom: .95rem;
+        right: 0.95rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
         width: 28rem;
         height: 31rem;
         padding: 4.5rem 4rem;
     }
-    .services__bottom__card > p {
+}
+
+/* Doctors card */
+.doctors__card {
+    max-width: 42rem;
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        max-width: 33rem;
+    }
+}
+
+.doctors__card__img {
+    border-radius: 2rem;
+    width: 42rem;
+    height: 50rem;
+
+    & > img {
+        border-radius: 2rem;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+        object-fit: cover;
+    }
+
+    @media (min-width: 320px) and (max-width: 639px) {
+        height: 40rem;
+        width: 32rem;
+    }
+}
+
+.doctors__card__body {
+    padding-top: 3rem;
+
+    & > h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 100%;
+        color: var(--color-primary);
+        margin-bottom: 1.5rem;
+    }
+
+    & > h2 {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 100%;
+        color: var(--color-accent);
+        margin-bottom: 3rem;
+    }
+
+    & > ul {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
         font-size: 1.4rem;
         line-height: 1.2;
+        color: #434343;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 25px;
     }
 }
