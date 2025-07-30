@@ -89,9 +89,9 @@ export function initSwipers() {
 
     // Import all images using Vite's import.meta.glob (eager = import at build time)
     const allImages = {
-    praktek: import.meta.glob('/src/assets/images/optimized/gallery/*.jpg', { eager: true }),
-    produk: import.meta.glob('/src/assets/images/optimized/lab/gallery/*.jpg', { eager: true }),
-    laboratorium: import.meta.glob('/src/assets/images/optimized/galeri_lab/*.jpg', { eager: true }),
+    praktek: import.meta.glob('/src/assets/images/galeri/*.avif', { eager: true }),
+    produk: import.meta.glob('/src/assets/images/lab/galeri/*.avif', { eager: true }),
+    laboratorium: import.meta.glob('/src/assets/images/galeri_lab/*.avif', { eager: true }),
     };
 
     // Map to your original gallery structure
