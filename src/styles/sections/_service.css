@@ -158,7 +158,10 @@
     float: right;
     margin-bottom: 16px;
 }
-
+#mobileModalBody {
+    margin: 0 auto;
+    max-width: 70rem;
+}
 .mobile__modal__head {
     display: flex; 
     gap: 4rem; 
